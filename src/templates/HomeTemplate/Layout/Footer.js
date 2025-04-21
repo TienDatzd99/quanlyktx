@@ -34,11 +34,15 @@ export default function Footer() {
           <div className="row">
             {/* Left Column */}
             <div className="col-md-4">
-              <div className="col-md-6 mb-6 mb-md-0">
-                <h1 className="h3 font-weight-bold text-dark">LOZIDO</h1>
-                <p className="h6 text-secondary">Quản lý NHÀ CHO THUÊ</p>
+              <div className="col-md-6 mb-6 mb-md-0 w-100">
+                <div className="d-flex align-items-center mb-4">
+                  <img src="/Logo_PTIT_University.png" alt="Logo" className="img-fluid mr-2" style={{ width: '50px', height: '50px' }} />
+                  <h1 className="h3 font-weight-bold text-dark ms-2">PTIT Ký túc xá</h1>
+
+                </div>
+                <p className="h6 text-secondary">Quản lý Ký Túc Xá</p>
               </div>
-              <p className="text-muted">Phần mềm quản lý nhà cho thuê chuyên nghiệp với nhiều tính năng hỗ trợ chủ nhà và người thuê.</p>
+              <p className="text-muted">Phần mềm quản lý ký túc xá chuyên nghiệp với nhiều tính năng hỗ trợ sinh viên quản lý và thanh toán cho ký túc xá của mình.</p>
               <div className="d-flex align-items-center">
               
               </div>
@@ -88,7 +92,7 @@ export default function Footer() {
                 <p><i className="fas fa-phone-alt mr-2 text-dark"></i> 0123 456 789</p>
                 <p><i className="fas fa-envelope mr-2 text-dark"></i> <a href="mailto:example@domain.com" className="text-decoration-none  text-dark">example@domain.com</a></p>
                 <p><i className="fas fa-clock mr-2 text-dark"></i> 8:00 - 17:00 (Thứ 2 - Thứ 6)</p>
-                <p><i className="fas fa-map-marker-alt mr-2 text-dark"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                <p><i className="fas fa-map-marker-alt mr-2 text-dark"></i> 96A Đ. Trần Phú, P. Mộ Lao, Hà Đông, Hà Nội</p>
               </div>
             </div>
           </div>
@@ -140,14 +144,14 @@ export default function Footer() {
           <div className="d-flex justify-content-between align-items-center flex-column ">
             {/* Company Info (Centered) */}
             <div className="text-center text-muted mb-2 mb-md-0">
-              <p className="mb-0 fw-bold">COPYRIGHT © LOZIDO - Quản lý nhà cho thuê</p>
-              <p className="mb-0">CÔNG TY TNHH PHÁT TRIỂN POPULIS</p>
+              <p className="mb-0 fw-bold">Copyright © 2020 Học viện Công nghệ Bưu chính Viễn thông</p>
+              
             </div>
 
             {/* Business Registration Info (Right) */}
             <div className="text-muted text-md-right">
               <p className="mb-0">
-                Đăng ký kinh doanh số 46 0318727823 - Do Sở kế hoạch và Đầu tư thành phố Hồ Chí Minh cấp đầu ngày 19 tháng 01 năm 2024
+                Design by Le Tien Dat
               </p>
             </div>
           </div>

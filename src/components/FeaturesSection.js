@@ -18,10 +18,10 @@ const FeaturesSection = () => {
         {/* Header */}
         <div className="text-center mb-5" >
           <h1 className="fw-bold text-dark mb-3 h3 h-md-2" data-aos="fade-up">
-            VỚI NHỮNG TÍNH NĂNG TUYỆT VỜI PHẦN MỀM QUẢN LÝ SẼ HỖ TRỢ BẠN.
+            VỚI NHỮNG TÍNH NĂNG TUYỆT VỜI WEBSITE SẼ HỖ TRỢ BẠN.
           </h1>
           <p className="text-secondary mx-auto" style={{ maxWidth: '700px' }} data-aos="fade-up">
-            Nhiều tính năng căn bản và mở rộng sẽ giúp công việc quản lý phòng trọ của bạn dễ dàng hơn bao giờ hết.
+            Nhiều tính năng căn bản và mở rộng sẽ giúp công việc thanh toán của bạn dễ dàng hơn bao giờ hết.
             Hãy tham khảo một vài chức năng cơ bản mà chúng tôi đang hỗ trợ.
           </p>
         </div>

@@ -29,3 +29,15 @@ code {
   background-color: #faca4b !important;
   color: #000000;
 }
+
+.testimonial {
+  width: 100%; /* hoặc 90%, hoặc giá trị pixel */
+  max-width: 100%;
+  background: #fff;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 15px 46px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 100px 70px 70px 200px !important;
+  position: relative;
+}

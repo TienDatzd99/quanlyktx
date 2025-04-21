@@ -11,11 +11,11 @@ export default function Header() {
           <div className="d-flex align-items-center">
             <Link to="/" className="d-flex align-items-center text-decoration-none">
               <img
-                src="https://quanlytro.me/images/logo-quan-ly-tro.png"
-                alt="Logo Dormido"
+                src="/Logo_PTIT_University.png"
+                alt="PTIT Ký Túc Xá"
                 style={{ width: "40px", height: "40px" }}
               />
-              <span className="ms-2 fs-4 fw-bold">DORMIDO</span>
+              <span className="ms-2 fs-4 fw-bold text-danger">PTIT Ký Túc Xá</span>
             </Link>
           </div>
 
@@ -30,7 +30,7 @@ export default function Header() {
               APP sinh viên
             </Link>
             <Link to="#" className="text-dark text-decoration-none">
-              Bảng giá
+              Lợi ích
             </Link>
             <div className="dropdown">
               <button
@@ -93,7 +93,7 @@ export default function Header() {
 
           <div className="d-flex align-items-center gap-3">
             <a href="tel:0965227453" className="btn btn-primary">
-              <i className="fas fa-phone-alt me-2"></i>0965.227.453
+              <i className="fas fa-phone-alt me-2"></i>0123.456.789
             </a>
             <Link to="#" className="text-dark text-decoration-none">
               Đăng nhập

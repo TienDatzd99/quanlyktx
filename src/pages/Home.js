@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FeaturesSection from "../components/FeaturesSection";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -42,6 +43,8 @@ export default function Home() {
     { name: "ACB", logo: "https://logo.clearbit.com/acb.com.vn" },
     { name: "Agribank", logo: "https://logo.clearbit.com/agribank.com.vn" },
     { name: "BIDV", logo: "https://logo.clearbit.com/bidv.com.vn" },
+    { name: "MB Bank", logo: "https://logo.clearbit.com/mbbank.com.vn" },
+    { name: "Shinhan Bank", logo: "https://logo.clearbit.com/shinhan.com.vn" }
   ];
 
   return (
@@ -58,14 +61,15 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
               <h1 className="display-4 fs-1 fw-bold mb-4">
-                <span className="text-success">Phần mềm quản lý ký túc xá</span><br /> Điện thoại - iPad - Máy tính 🎉
+                <span className="text-success">Đăng ký vào ở ký túc xá ngay</span><br /> Điện thoại - iPad - Máy tính 🎉
               </h1>
               <p className="fs-4 mb-4">
-                Hiệu quả - Chuyên nghiệp - Tránh sai sót... Quản lý chưa bao giờ dễ dàng hơn thế!
+                Ký túc xá của chúng tôi cung cấp môi trường sống an toàn, tiện nghi với mức giá sinh viên.
+                thuận tiện cho việc di chuyển đến trường. Cơ sở vật chất hiện đại, không gian xanh mát tạo môi trường sống lý tưởng.
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3">
                 <a href="#" className="btn btn1 btn-primary btn-lg">
-                  Giới thiệu phần mềm
+                  Đăng ký hồ sơ xét duyệt
                 </a>
                 <a href="#" className="btn btn1 btn-outline-dark btn-media btn-lg rounded-pill">
                   Tư vấn dịch vụ
@@ -74,7 +78,7 @@ export default function Home() {
             </div>
             <div className="col-md-6 text-center">
               <img
-                src="https://quanlytro.me/images/banner-home.webp"
+                src="/truong.jpg"
                 alt="App Dormido"
                 className="img-fluid rounded shadow"
                 style={{ maxWidth: "100%", height: "auto" }}
@@ -86,7 +90,7 @@ export default function Home() {
 
 
 
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-white">
         <div className="container py-5">
           <div className="row align-items-center">
 
@@ -104,8 +108,8 @@ export default function Home() {
               {/* Carousel slides */}
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <div className="row row-cols-3 g-3">
-                    {banks.slice(0, 3).map((bank, index) => (
+                  <div className="row row-cols-4 g-5">
+                    {banks.slice(0, 4).map((bank, index) => (
                       <div className="col" key={index}>
                         <div className="card shadow-sm d-flex align-items-center justify-content-center p-3">
                           <img
@@ -120,8 +124,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="row row-cols-3 g-3">
-                    {banks.slice(3, 6).map((bank, index) => (
+                  <div className="row row-cols-4 g-5">
+                    {banks.slice(4, 8).map((bank, index) => (
                       <div className="col" key={index + 3}>
                         <div className="card shadow-sm d-flex align-items-center justify-content-center p-3">
                           <img
@@ -156,43 +160,15 @@ export default function Home() {
       </section>
 
 
-      <section className="py-5 bg-white">
-        <div className="container py-5">
-          <div className="row align-items-center">
-            <div className="col-md-6 mb-4 mb-md-0 order-md-1">
-              <img
-                src="https://quanlytro.me/images/icons/button_media.svg"
-                alt="Multi platform"
-                className="img-fluid"
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-            </div>
-            <div className="col-md-6 order-md-2">
-              <h2 className="display-5 fw-bold mb-4">Quản lý trên đa nền tảng</h2>
-              <p className="fs-5 mb-4">Điện thoại - iPad - Máy tính - Website</p>
-              <p className="text-muted mb-4">
-                Quản lý trên tất cả các thiết bị, mọi lúc mọi nơi. Dù bạn đang ở đâu chỉ cần có kết
-                nối internet là bạn có thể quản lý ký túc xá của mình. Mọi dữ liệu được đồng bộ trên
-                tất cả các thiết bị.
-              </p>
-              <div className="d-flex gap-3">
-                <a href="#" className="btn btn-dark d-flex align-items-center">
-                  <i className="fab fa-apple me-2 fs-5"></i> App Store
-                </a>
-                <a href="#" className="btn btn-dark d-flex align-items-center">
-                  <i className="fab fa-google-play me-2 fs-5"></i> Google Play
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <Testimonials />
+
 
       <section className="py-5 text-dark" data-aos="fade-up">
         <div className="container py-5 text-center">
-          <h2 className="display-5 fw-bold mb-4">Đăng ký trải nghiệm miễn phí</h2>
+          <h2 className="display-5 fw-bold mb-4">Đăng ký ngay bây giờ</h2>
           <p className="fs-4 mb-5">
-            Nhận tư vấn và trải nghiệm miễn phí phần mềm quản lý ký túc xá
+            Nhận tư vấn về thông tin chi tiết về việc đăng ký ký túc xá
           </p>
 
           <div className="card mx-auto shadow" style={{ maxWidth: "500px" }}>
