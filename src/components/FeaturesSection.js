@@ -122,10 +122,10 @@ const FeaturesSection = () => {
                   </div>
                   <div className="col">
                     <h4 className="card-title mb-0 text-dark fw-bold" style={{ fontSize: "1.5rem" }}>
-                      Thanh toán tiền điện
+                      Báo cáo tình trạng phòng 
                     </h4>
                     <p className="card-text text-secondary">
-                      Tra cứu và thanh toán tiền điện từng phòng theo định kỳ nhanh chóng.
+                      Tra cứu và báo cáo tình trạng phòng ở ký túc xá nhanh chóng.
                     </p>
                   </div>
                 </div>

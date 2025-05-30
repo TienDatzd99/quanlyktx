@@ -1,0 +1,41 @@
+.room-detail-container {
+  padding: 20px;
+}
+
+.room-detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  margin-right: 10px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.room-not-found {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.room-not-found h2 {
+  margin-bottom: 20px;
+  color: #888;
+}

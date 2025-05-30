@@ -1,9 +1,46 @@
-
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCurrentUser } from "../../../redux/slices/manageSlice";
 
 export default function Header() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  
+  // Lấy thông tin người dùng từ state
+  const { userLogin } = useSelector(state => state.auth || {});
+  
+  // Kiểm tra token và fetch thông tin người dùng khi component mount
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    // Xác định trạng thái đăng nhập dựa trên sự tồn tại của token
+    setIsAuthenticated(!!token);
+    
+    // Nếu có token nhưng chưa có thông tin người dùng, thì fetch thông tin
+    if (token && !userLogin) {
+      dispatch(fetchCurrentUser());
+    }
+  }, [dispatch, userLogin]);
+  
+  // Lấy chữ cái đầu tiên của tên người dùng để làm avatar
+  const getInitials = (name) => {
+    if (!name) return "U";
+    return name.charAt(0).toUpperCase();
+  };
+  
+  // Hàm đăng xuất
+  const handleLogout = () => {
+    // Xóa token từ localStorage
+    localStorage.removeItem('token');
+    // Cập nhật trạng thái xác thực
+    setIsAuthenticated(false);
+    // Reset state user (nếu bạn có action logout)
+    // dispatch(logout());
+    navigate('/login');
+  };
+
   return (
     <header className="bg-white shadow-sm">
       <div className="container py-3">
@@ -92,15 +129,52 @@ export default function Header() {
           </nav>
 
           <div className="d-flex align-items-center gap-3">
-            <a href="tel:0965227453" className="btn btn-primary">
+            <a href="tel:0123456789" className="btn btn-primary">
               <i className="fas fa-phone-alt me-2"></i>0123.456.789
             </a>
-            <Link to="#" className="text-dark text-decoration-none">
-              Đăng nhập
-            </Link>
-            <Link to="#" className="btn btn-primary">
-              Đăng ký
-            </Link>
+            
+            {/* Hiển thị nút đăng nhập/đăng ký hoặc thông tin người dùng */}
+            {!isAuthenticated ? (
+              <>
+                <Link to="/login" className="text-dark text-decoration-none">
+                  Đăng nhập
+                </Link>
+                <Link to="/register" className="btn btn-primary">
+                  Đăng ký
+                </Link>
+              </>
+            ) : (
+              <div className="d-flex align-items-center gap-2">
+                <span className="text-dark">{userLogin?.name || "Sinh viên"}</span>
+                <div className="dropdown">
+                  <div 
+                    className="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" 
+                    style={{ width: "40px", height: "40px", cursor: "pointer" }}
+                    data-bs-toggle="dropdown"
+                  >
+                    {getInitials(userLogin?.name)}
+                  </div>
+                  <ul className="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <Link className="dropdown-item" to="/profile">
+                        Thông tin cá nhân
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/change-password">
+                        Đổi mật khẩu
+                      </Link>
+                    </li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li>
+                      <button className="dropdown-item text-danger" onClick={handleLogout}>
+                        Đăng xuất
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

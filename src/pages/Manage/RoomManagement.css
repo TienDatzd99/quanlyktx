@@ -1,0 +1,103 @@
+.room-management {
+  padding: 20px;
+}
+
+.room-management h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.room-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.room-table th {
+  background-color: #f8f9fa;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.room-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dee2e6;
+  color: #333;
+}
+
+.room-table tr {
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.room-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Dòng có báo cáo - màu đỏ */
+.room-table tr.has-reports {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.room-table tr.has-reports:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.status {
+  font-weight: 500;
+}
+
+.status.vacant {
+  color: #28a745;
+}
+
+.status.occupied {
+  color: #007bff;
+}
+
+.report-badge {
+  background-color: #dc3545;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px !important;
+  font-style: italic;
+  color: #888;
+}
+
+.add-room-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.add-room-btn:hover {
+  background-color: #0069d9;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .room-table th, 
+  .room-table td {
+    padding: 8px;
+  }
+}

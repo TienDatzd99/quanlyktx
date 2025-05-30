@@ -1,0 +1,115 @@
+.login-container {
+  min-height: 100vh;
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f5f7fa;
+}
+
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+  z-index: 0;
+}
+
+.login-wave {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f5f7fa' fill-opacity='1' d='M0,192L60,186.7C120,181,240,171,360,186.7C480,203,600,245,720,240C840,235,960,181,1080,149.3C1200,117,1320,107,1380,101.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login-row {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.login-logo img {
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.login-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 16px;
+  height: 48px;
+  font-weight: 500;
+}
+
+.google-login-btn:hover {
+  background-color: #f9f9f9;
+  border-color: #d9d9d9;
+}
+
+.login-divider {
+  margin: 16px 0;
+}
+
+.login-form {
+  margin-top: 16px;
+}
+
+.login-form-forgot {
+  color: #1890ff;
+}
+
+.login-button {
+  height: 48px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .login-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 0 8px;
+  }
+  
+  .login-logo h2 {
+    font-size: 20px;
+  }
+  
+  .login-title {
+    font-size: 22px !important;
+  }
+}
